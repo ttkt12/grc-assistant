@@ -41,7 +41,7 @@ WEB_CHAT_HTML = """<!doctype html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SecureMind RAG</title>
+  <title>GRC Assistant</title>
   <style>
     :root {
       color-scheme: light;
@@ -162,7 +162,7 @@ WEB_CHAT_HTML = """<!doctype html>
 </head>
 <body>
   <header>
-    <h1>SecureMind RAG</h1>
+    <h1>GRC Assistant</h1>
   </header>
   <main>
     <section id="messages" aria-live="polite"></section>
@@ -372,7 +372,7 @@ def clean_teams_message_text(turn_context: TurnContext) -> str:
     return text.strip()
 
 
-class SecureMindTeamsBot(ActivityHandler):
+class GRCAssistantTeamsBot(ActivityHandler):
     def __init__(self, vector_store, client, adapter=None, app_id: str = "") -> None:
         self.vector_store = vector_store
         self.client = client
@@ -591,7 +591,7 @@ def create_web_chat_handler(vector_store, client):
     return chat
 
 
-def create_messages_handler(adapter: BotFrameworkAdapter, bot: SecureMindTeamsBot, teams_enabled: bool):
+def create_messages_handler(adapter: BotFrameworkAdapter, bot: GRCAssistantTeamsBot, teams_enabled: bool):
     async def messages(request: web.Request) -> web.Response:
         if not teams_enabled:
             return web.Response(status=503, text="Microsoft Teams bot credentials are not configured.")
@@ -643,7 +643,7 @@ def create_app() -> web.Application:
         channel_auth_tenant=auth_tenant,
     )
     adapter = BotFrameworkAdapter(settings)
-    bot = SecureMindTeamsBot(vector_store, client, adapter=adapter, app_id=app_id)
+    bot = GRCAssistantTeamsBot(vector_store, client, adapter=adapter, app_id=app_id)
 
     app = web.Application(middlewares=[access_token_middleware])
     app.router.add_get("/", web_chat_home)
@@ -661,7 +661,7 @@ def main() -> None:
     host = os.getenv("TEAMS_BOT_HOST", "0.0.0.0")
     port = int(os.getenv("PORT") or os.getenv("TEAMS_BOT_PORT", "3978"))
     app = create_app()
-    print(f"SecureMind Teams bot listening on http://{host}:{port}/api/messages")
+    print(f"GRC Assistant Teams bot listening on http://{host}:{port}/api/messages")
     web.run_app(app, host=host, port=port)
 
 

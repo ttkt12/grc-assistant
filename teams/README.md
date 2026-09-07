@@ -1,4 +1,4 @@
-# SecureMind RAG Microsoft Teams Package
+# GRC Assistant Microsoft Teams Package
 
 This folder is a template for creating a Microsoft Teams custom app package.
 

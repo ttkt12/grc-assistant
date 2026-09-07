@@ -25,8 +25,8 @@ knowledge_manifest.json
 last_deployed_manifest.json
 
 .package_build/
-securemind-rag-teams-template.zip
-securemind-rag-teams-app.zip
+grc-assistant-teams-template.zip
+grc-assistant-teams-app.zip
 
 papers/*
 !papers/.gitkeep

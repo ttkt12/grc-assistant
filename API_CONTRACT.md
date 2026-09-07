@@ -1,6 +1,6 @@
 # Backend API Contract
 
-SecureMind RAG is served by `teams_bot.py` using `aiohttp`. The backend exposes the browser UI, JSON chat API, document catalog metadata, health check, and Microsoft Teams Bot Framework endpoint.
+GRC Assistant is served by `teams_bot.py` using `aiohttp`. The backend exposes the browser UI, JSON chat API, document catalog metadata, health check, and Microsoft Teams Bot Framework endpoint.
 
 Base URL:
 
@@ -12,7 +12,7 @@ https://endpoint-77ada21e-9fec-4ea0-96ff-f9f6e79fbe1a.agentbase-runtime.aiplatfo
 
 | Method | Path | Purpose |
 | --- | --- | --- |
-| `GET` | `/` | SecureMind web chat UI. |
+| `GET` | `/` | GRC Assistant web chat UI. |
 | `GET` | `/health` | Runtime health check. |
 | `POST` | `/chat` | Chat API for RAG and catalog-aware answers. |
 | `GET` | `/documents/count` | Safe document catalog count. |
@@ -35,7 +35,7 @@ curl "https://endpoint-77ada21e-9fec-4ea0-96ff-f9f6e79fbe1a.agentbase-runtime.ai
 
 ## `GET /`
 
-Purpose: serves the SecureMind RAG web UI.
+Purpose: serves the GRC Assistant web UI.
 
 Response body: `text/html`
 

@@ -1,6 +1,6 @@
-# SecureMind RAG Teams App Package
+# GRC Assistant Teams App Package
 
-This folder contains a minimal Microsoft Teams app package for the SecureMind RAG chatbot.
+This folder contains a minimal Microsoft Teams app package for the GRC Assistant chatbot.
 
 Before packaging:
 
@@ -12,7 +12,7 @@ To package:
 
 ```bash
 cd teams_app
-zip securemind-rag-teams-app.zip manifest.json color.png outline.png
+zip grc-assistant-teams-app.zip manifest.json color.png outline.png
 ```
 
 Zip the contents of `teams_app/`, not the folder itself.

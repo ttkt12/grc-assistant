@@ -74,7 +74,7 @@ def meta_answer(intent: str) -> str:
     if intent == "greeting":
         return (
             "Chào bạn 👋 Mình là **GRC Assistant** — trợ lý tra cứu tài liệu ISMS, bảo mật "
-            "và tuân thủ của ZaloPay. Bạn cần tra cứu chính sách, quy trình hay tiêu chuẩn "
+            "và tuân thủ của Zalopay. Bạn cần tra cứu chính sách, quy trình hay tiêu chuẩn "
             "nào? Ví dụ: \"quy trình cấp quyền truy cập\", \"ZION-QT-04 có mấy phiên bản\"."
         )
     if intent == "ack":
@@ -84,7 +84,7 @@ def meta_answer(intent: str) -> str:
         )
     if intent == "identity":
         return (
-            f"Mình là **GRC Assistant**, trợ lý tri thức GRC của ZaloPay (team GRC thuộc "
+            f"Mình là **GRC Assistant**, trợ lý tri thức GRC của Zalopay (team GRC thuộc "
             f"Compliance). Mình trả lời dựa trên {total} tài liệu ISMS đã được lập chỉ mục — "
             "chỉ dùng nội dung trong tài liệu, không suy đoán bên ngoài."
         )

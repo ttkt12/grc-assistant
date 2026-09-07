@@ -1,4 +1,4 @@
-name: SecureMind RAG CI / Deploy
+name: GRC Assistant CI / Deploy
 
 "on":
   workflow_dispatch:

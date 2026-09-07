@@ -1,6 +1,6 @@
 # UI Requirements
 
-This document describes the first web UI version for SecureMind RAG. Do not build the frontend until this contract is accepted.
+This document describes the first web UI version for GRC Assistant. Do not build the frontend until this contract is accepted.
 
 ## Product Goal
 
@@ -12,7 +12,7 @@ The first screen is the chat experience. Do not make a marketing landing page.
 
 Required regions:
 
-* Header with product name: `SecureMind RAG`.
+* Header with product name: `GRC Assistant`.
 * Main scrollable conversation area.
 * Empty state before the first question.
 * Composer area with text input and send button.

@@ -39,7 +39,7 @@ def assert_true(condition: bool, message: str) -> None:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Verify deployed SecureMind RAG endpoint.")
+    parser = argparse.ArgumentParser(description="Verify deployed GRC Assistant endpoint.")
     parser.add_argument("--base-url", required=True)
     args = parser.parse_args()
 
@@ -62,7 +62,7 @@ def main() -> None:
     count = get_json(f"{base_url}/documents/count")
     assert_true(int(count.get("total_documents", 0)) > 0, "documents count is empty")
     home = get_text(f"{base_url}/")
-    assert_true("SecureMind RAG" in home, "web UI home did not load")
+    assert_true("GRC Assistant" in home, "web UI home did not load")
 
     catalog_count = post_json(
         f"{base_url}/chat",

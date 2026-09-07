@@ -1,6 +1,6 @@
 # SharePoint Local Knowledge Update
 
-SecureMind RAG now uses a local-only SharePoint sync design.
+GRC Assistant now uses a local-only SharePoint sync design.
 
 SharePoint remains the source of truth for official ISMS, security, compliance, policy, procedure, and governance documents. GitHub Actions no longer connects to SharePoint and no longer uses Microsoft Graph `client_credentials` / app-only sync.
 

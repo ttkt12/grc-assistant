@@ -103,7 +103,7 @@ def print_summary(sync_status: str, tests_passed: bool) -> None:
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Refresh SecureMind RAG local knowledge base.")
+    parser = argparse.ArgumentParser(description="Refresh GRC Assistant local knowledge base.")
     parser.add_argument("--skip-sync", action="store_true", help="Skip SharePoint sync.")
     parser.add_argument("--skip-tests", action="store_true", help="Run sync/build steps only.")
     parser.add_argument("--clean", action="store_true", help="Delete vector_db and document_catalog.json first.")

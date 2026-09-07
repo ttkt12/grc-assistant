@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 # teams_app/ carries the real deployment values, so the bare command produces an
 # uploadable package. teams/ stays as a parametric template (use --bot-id/--domain).
 DEFAULT_SOURCE = ROOT / "teams_app"
-DEFAULT_OUTPUT = ROOT / "securemind-rag-teams-app.zip"
+DEFAULT_OUTPUT = ROOT / "grc-assistant-teams-app.zip"
 
 PLACEHOLDER_GUID = "00000000-0000-0000-0000-000000000000"
 GUID_RE = re.compile(
@@ -126,7 +126,7 @@ def build_package(source_dir: Path, output_path: Path, bot_id: str = "", domain:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Build the SecureMind RAG Teams app package.")
+    parser = argparse.ArgumentParser(description="Build the GRC Assistant Teams app package.")
     parser.add_argument("--source", type=Path, default=DEFAULT_SOURCE)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument("--bot-id", default="", help="Microsoft Bot App ID to place in the manifest.")

@@ -1,6 +1,6 @@
 # Microsoft Teams Integration
 
-SecureMind RAG exposes a Microsoft Bot Framework-compatible endpoint through the existing `aiohttp` runtime.
+GRC Assistant exposes a Microsoft Bot Framework-compatible endpoint through the existing `aiohttp` runtime.
 
 Runtime endpoints:
 
@@ -61,8 +61,8 @@ There are **two** Teams package folders with distinct roles:
 
 | Folder | Role | Output zip |
 | --- | --- | --- |
-| `teams_app/` | **Canonical**: pre-filled with this deployment's real bot ID and runtime domain. `package_teams_app.py` defaults to it. | `securemind-rag-teams-app.zip` |
-| `teams/` | Parametric template (placeholders). Build it with `--bot-id` and `--domain` to inject real values without editing files. | `securemind-rag-teams-app.zip` (override with `--output`) |
+| `teams_app/` | **Canonical**: pre-filled with this deployment's real bot ID and runtime domain. `package_teams_app.py` defaults to it. | `grc-assistant-teams-app.zip` |
+| `teams/` | Parametric template (placeholders). Build it with `--bot-id` and `--domain` to inject real values without editing files. | `grc-assistant-teams-app.zip` (override with `--output`) |
 
 The bare command now produces an uploadable package from `teams_app/`:
 
@@ -115,7 +115,7 @@ python scripts/package_teams_app.py
 The output zip is:
 
 ```text
-securemind-rag-teams-app.zip
+grc-assistant-teams-app.zip
 ```
 
 To build from the `teams/` template with real values injected at build time

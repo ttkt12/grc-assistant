@@ -1,12 +1,12 @@
 # 🎬 Kịch bản Demo — GRC Assistant
 
-Trợ lý tri thức ISMS cho ZaloPay (Compliance / GRC). Demo gồm **2 kênh**: Web UI và Microsoft Teams.
+Trợ lý tri thức ISMS cho Zalopay (Compliance / GRC). Demo gồm **2 kênh**: Web UI và Microsoft Teams.
 
 ---
 
 ## 🎯 Mục tiêu (nói mở đầu ~30s)
 
-> "GRC Assistant biến **52 tài liệu ISMS** đã duyệt của ZaloPay thành trợ lý hỏi đáp. Mọi câu trả lời **chỉ lấy từ tài liệu**, kèm **trích dẫn nguồn** — không bịa, phù hợp môi trường tuân thủ. Dùng được trên **web** và ngay trong **Microsoft Teams**."
+> "GRC Assistant biến **52 tài liệu ISMS** đã duyệt của Zalopay thành trợ lý hỏi đáp. Mọi câu trả lời **chỉ lấy từ tài liệu**, kèm **trích dẫn nguồn** — không bịa, phù hợp môi trường tuân thủ. Dùng được trên **web** và ngay trong **Microsoft Teams**."
 
 ---
 
@@ -41,7 +41,7 @@ Script sẽ khởi động server, chờ sẵn sàng, tự mở trình duyệt `
 | 5 | Gõ | `ai là tác giả của ZION-TC-13` | **Metadata theo bằng chứng** — không lấy từ field auto-extract dễ sai. |
 | 6 | Gõ | `có bao nhiêu tài liệu` | **Catalog** — trả lời chính xác 52. |
 | 7 | Gõ | `bạn làm được gì` | **Câu xã giao/meta** — trả lời thân thiện về năng lực (không lôi nội dung lạ). |
-| 8 | Bấm 🌙/☀️ (góc trên phải) | — | **Dark/Light mode**, branding ZaloPay. |
+| 8 | Bấm 🌙/☀️ (góc trên phải) | — | **Dark/Light mode**, branding Zalopay. |
 
 **Điểm nhấn chốt:** "Mỗi câu trả lời đều dẫn đúng tài liệu + trang. Bot tự phân loại câu hỏi (gợi ý tài liệu / version / metadata / nội dung) để trả lời đúng cách."
 

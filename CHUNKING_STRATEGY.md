@@ -1,6 +1,6 @@
 # Chunking Strategy
 
-SecureMind RAG uses document-aware chunking for ISMS, policy, standard, and procedure PDFs.
+GRC Assistant uses document-aware chunking for ISMS, policy, standard, and procedure PDFs.
 
 ## Current Default
 

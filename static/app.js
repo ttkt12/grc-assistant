@@ -1,6 +1,6 @@
 "use strict";
 
-/* SecureMind RAG — premium web client.
+/* GRC Assistant — premium web client.
  * Backend contract is unchanged: POST /chat and GET /documents/count, with an
  * optional X-App-Access-Token header. Rendering is XSS-safe (textContent / DOM
  * nodes only) and never exposes debug metadata, prompts, chunks, or tokens. */
@@ -37,8 +37,8 @@ const els = {
   errorRetry: document.getElementById("error-retry"),
 };
 
-const STORAGE_KEY = "securemind-rag:sessions:v2";
-const TOKEN_KEY = "securemind-rag:access-token";
+const STORAGE_KEY = "grc-assistant:sessions:v2";
+const TOKEN_KEY = "grc-assistant:access-token";
 const MAX_HISTORY = 10;
 const MAX_SESSIONS = 40;
 const SAFE_ERROR = "Không lấy được câu trả lời lúc này. Vui lòng thử lại.";

@@ -24,8 +24,8 @@ token_cache.bin
 *.credentials.json
 .agentbase-state.json
 .package_build/
-securemind-rag-teams-template.zip
-securemind-rag-teams-app.zip
+grc-assistant-teams-template.zip
+grc-assistant-teams-app.zip
 papers/*
 !papers/.gitkeep
 *.pdf

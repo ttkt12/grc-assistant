@@ -3,9 +3,9 @@
   "manifestVersion": "1.16",
   "version": "1.0.0",
   "id": "00000000-0000-0000-0000-000000000000",
-  "packageName": "com.securemind.rag",
+  "packageName": "com.zalopay.grcassistant",
   "developer": {
-    "name": "SecureMind",
+    "name": "Zalopay",
     "websiteUrl": "https://REPLACE_WITH_AGENTBASE_DOMAIN",
     "privacyUrl": "https://REPLACE_WITH_AGENTBASE_DOMAIN",
     "termsOfUseUrl": "https://REPLACE_WITH_AGENTBASE_DOMAIN"
@@ -15,12 +15,12 @@
     "outline": "outline.png"
   },
   "name": {
-    "short": "SecureMind RAG",
-    "full": "SecureMind RAG"
+    "short": "GRC Assistant",
+    "full": "GRC Assistant"
   },
   "description": {
     "short": "Chatbot for security and compliance documents.",
-    "full": "SecureMind RAG is a Microsoft Teams chatbot for querying security, compliance, ISMS, policy, procedure, and governance documents."
+    "full": "GRC Assistant is a Microsoft Teams chatbot for querying security, compliance, ISMS, policy, procedure, and governance documents."
   },
   "accentColor": "#146C5F",
   "bots": [

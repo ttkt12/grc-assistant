@@ -1,4 +1,4 @@
-"""Golden regression tests for SecureMind RAG answer quality.
+"""Golden regression tests for GRC Assistant answer quality.
 
 These guard the high-value behaviors that previously regressed:
   * catalog count/list stay deterministic (no retrieval / no LLM, sources=[]),

@@ -317,7 +317,7 @@ def test_labeled_dataset(vector_store, client, catalog_only: bool = False) -> No
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="SecureMind RAG CI smoke tests.")
+    parser = argparse.ArgumentParser(description="GRC Assistant CI smoke tests.")
     parser.add_argument("--catalog-only", action="store_true", help="Skip LLM-backed RAG questions.")
     args = parser.parse_args()
 

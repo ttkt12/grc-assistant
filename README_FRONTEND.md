@@ -61,7 +61,7 @@ Response:
 ```js
 const API_BASE_URL = "https://endpoint-77ada21e-9fec-4ea0-96ff-f9f6e79fbe1a.agentbase-runtime.aiplatform.vngcloud.vn";
 
-export async function askSecureMind(question) {
+export async function askGrcAssistant(question) {
   const response = await fetch(`${API_BASE_URL}/chat`, {
     method: "POST",
     headers: {

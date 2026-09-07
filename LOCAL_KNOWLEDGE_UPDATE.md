@@ -1,6 +1,6 @@
 # Local Knowledge Update
 
-Use this when SharePoint documents change and you want to refresh SecureMind RAG locally.
+Use this when SharePoint documents change and you want to refresh GRC Assistant locally.
 
 ## 1. Configure Local Auth
 

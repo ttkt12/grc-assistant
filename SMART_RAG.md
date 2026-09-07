@@ -1,6 +1,6 @@
 # Smart RAG — Evidence-Based Metadata Answers
 
-SecureMind RAG answers document-specific metadata questions from **actual document
+GRC Assistant answers document-specific metadata questions from **actual document
 evidence**, not from auto-extracted catalog fields.
 
 ## Source-of-truth rule

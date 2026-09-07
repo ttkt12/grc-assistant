@@ -1,6 +1,6 @@
-# SecureMind RAG Deployment
+# GRC Assistant Deployment
 
-This guide covers deployment readiness for SecureMind RAG as an internal RAG chatbot service with CLI, web chat, and Microsoft Teams Bot Framework interfaces.
+This guide covers deployment readiness for GRC Assistant as an internal RAG chatbot service with CLI, web chat, and Microsoft Teams Bot Framework interfaces.
 
 AgentBase deployment is available for this project and has been used for the internal demo runtime.
 
@@ -63,7 +63,7 @@ https://endpoint-77ada21e-9fec-4ea0-96ff-f9f6e79fbe1a.agentbase-runtime.aiplatfo
 Teams app package:
 
 ```text
-securemind-rag-teams-app.zip
+grc-assistant-teams-app.zip
 ```
 
 If Teams custom app upload is blocked, send the package to IT/admin and ask them to upload it to the Teams app catalog. If the Azure Bot or Teams bot registration still needs endpoint configuration, set the messaging endpoint to the `/api/messages` URL above.
@@ -129,13 +129,13 @@ The checker validates:
 Build:
 
 ```bash
-docker build --platform linux/amd64 -t securemind-rag:test .
+docker build --platform linux/amd64 -t grc-assistant:test .
 ```
 
 Run locally:
 
 ```bash
-docker run --rm -p 8080:8080 --env-file .env --name securemind-rag-test securemind-rag:test
+docker run --rm -p 8080:8080 --env-file .env --name grc-assistant-test grc-assistant:test
 ```
 
 Health check:
@@ -247,7 +247,7 @@ Please configure the Teams/Azure Bot messaging endpoint to:
 https://endpoint-77ada21e-9fec-4ea0-96ff-f9f6e79fbe1a.agentbase-runtime.aiplatform.vngcloud.vn/api/messages
 
 The Teams app package is:
-securemind-rag-teams-app.zip
+grc-assistant-teams-app.zip
 ```
 
 ## Security And Artifact Handling

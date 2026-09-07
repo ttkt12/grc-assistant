@@ -3,9 +3,9 @@
   "manifestVersion": "1.16",
   "version": "1.0.0",
   "id": "92826e26-5c20-462e-8139-7e480672b5e5",
-  "packageName": "com.securemind.rag",
+  "packageName": "com.zalopay.grcassistant",
   "developer": {
-    "name": "SecureMind",
+    "name": "Zalopay",
     "websiteUrl": "https://endpoint-77ada21e-9fec-4ea0-96ff-f9f6e79fbe1a.agentbase-runtime.aiplatform.vngcloud.vn",
     "privacyUrl": "https://endpoint-77ada21e-9fec-4ea0-96ff-f9f6e79fbe1a.agentbase-runtime.aiplatform.vngcloud.vn",
     "termsOfUseUrl": "https://endpoint-77ada21e-9fec-4ea0-96ff-f9f6e79fbe1a.agentbase-runtime.aiplatform.vngcloud.vn"
@@ -16,11 +16,11 @@
   },
   "name": {
     "short": "GRC Assistant",
-    "full": "ZaloPay GRC Assistant"
+    "full": "Zalopay GRC Assistant"
   },
   "description": {
-    "short": "ZaloPay Compliance / GRC knowledge assistant for ISMS and security.",
-    "full": "GRC Assistant is ZaloPay's Compliance / GRC knowledge assistant for querying security, compliance, ISMS, policy, procedure, and governance documents."
+    "short": "Zalopay Compliance / GRC knowledge assistant for ISMS and security.",
+    "full": "GRC Assistant is Zalopay's Compliance / GRC knowledge assistant for querying security, compliance, ISMS, policy, procedure, and governance documents."
   },
   "accentColor": "#0033C9",
   "bots": [
