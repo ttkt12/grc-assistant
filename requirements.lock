@@ -1,0 +1,124 @@
+# requirements.lock — bộ version đầy đủ đã dựng được trên máy mới.
+#
+# Sinh ngày 2026-09-08 trên: macOS arm64 (Apple Silicon), CPython 3.12.14,
+# bằng `pip install -r requirements.txt` (KHÔNG dùng constraints.txt).
+#
+# Mức độ đã verify: `python predeploy_check.py` chạy qua các mục không cần
+# secret — `rag_core import: ok`, `teams_bot import: ok`,
+# `document_catalog.json: 52 documents`. Chưa verify runtime hỏi-đáp thật
+# (cần AI_PLATFORM_API_KEY + vector_db/).
+#
+# `requirements.txt` không pin version nên mỗi lần cài mới sẽ nhận bản mới nhất
+# trên PyPI. Bộ dưới đây lệch major khá nhiều so với máy cũ (langchain-core 1.x,
+# transformers 5.x, openai 3.x, sentence-transformers 6.x) — dùng file này khi
+# muốn dựng lại đúng môi trường này thay vì hứng bản mới nhất.
+#
+# Dùng:
+#   pip install -r requirements.lock
+#
+# CHỈ dành cho macOS/dev local. Docker + CI vẫn đi đường riêng:
+# `torch==2.12.0+cpu` từ PyTorch CPU index qua constraints.txt (xem Dockerfile) —
+# `torch==2.14.0` bên dưới là wheel macOS, không có bản +cpu tương ứng.
+aiohappyeyeballs==2.7.1
+aiohttp==3.14.3
+aiosignal==1.4.0
+annotated-doc==0.0.5
+annotated-types==0.8.0
+anyio==4.15.1
+attrs==26.1.0
+azure-core==1.41.0
+botbuilder-core==4.17.1
+botbuilder-schema==4.17.1
+botframework-connector==4.17.1
+botframework-streaming==4.17.1
+certifi==2026.7.22
+cffi==2.1.1
+charset-normalizer==3.5.1
+click==8.5.0
+cloudpickle==3.1.2
+cryptography==50.0.1
+distro==1.9.0
+docker==7.2.0
+faiss-cpu==1.15.0
+filelock==3.32.5
+frozenlist==1.8.0
+fsspec==2026.7.0
+greennode-agentbase==1.0.3
+h11==0.16.0
+hf-xet==1.6.0
+httpcore==1.0.9
+httpcore2==2.12.0
+httpx==0.28.1
+httpx-sse==0.4.3
+httpx2==2.12.0
+huggingface_hub==1.30.0
+idna==3.19
+isodate==0.7.2
+Jinja2==3.1.6
+jiter==0.16.0
+joblib==1.6.0
+jsonpatch==1.33
+jsonpickle==3.4.2
+jsonpointer==3.1.1
+langchain-classic==1.0.8
+langchain-community==0.4.2
+langchain-core==1.6.2
+langchain-huggingface==1.2.2
+langchain-protocol==0.0.19
+langchain-text-splitters==1.1.2
+langsmith==0.12.2
+markdown-it-py==4.2.0
+MarkupSafe==3.0.3
+mdurl==0.1.2
+mpmath==1.3.0
+msal==1.38.0
+msrest==0.7.1
+multidict==6.7.1
+narwhals==2.25.0
+networkx==3.6.1
+numpy==1.26.4
+oauthlib==3.3.1
+openai==3.8.0
+orjson==3.12.0
+packaging==26.3
+propcache==0.5.2
+pycparser==3.0
+pydantic==2.13.5
+pydantic-settings==2.15.0
+pydantic_core==2.46.5
+Pygments==2.21.0
+PyJWT==2.13.0
+pypdf==6.18.0
+python-dotenv==1.2.3
+PyYAML==6.0.3
+regex==2026.9.3
+requests==2.34.2
+requests-oauthlib==2.0.0
+requests-toolbelt==1.0.0
+rich==15.0.0
+safetensors==0.8.0
+scikit-learn==1.9.0
+scipy==1.17.1
+sentence-transformers==6.0.1
+shellingham==1.5.4
+sniffio==1.3.1
+SQLAlchemy==2.0.52
+starlette==1.6.0
+sympy==1.14.0
+tenacity==9.1.4
+threadpoolctl==3.6.0
+tokenizers==0.23.2
+torch==2.14.0
+tqdm==4.70.0
+transformers==5.16.1
+truststore==0.10.4
+typer==0.27.2
+typing-inspection==0.4.4
+typing_extensions==4.16.0
+urllib3==2.7.0
+uuid_utils==0.17.0
+uvicorn==0.52.4
+websockets==17.1
+xxhash==4.0.1
+yarl==1.24.5
+zstandard==0.25.0

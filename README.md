@@ -115,7 +115,9 @@ Bộ **ISMS Portal** hiện hành — **52 tài liệu duy nhất**:
 
 ```bash
 # 1. Cài dependencies
-python -m pip install -c constraints.txt -r requirements.txt
+python -m pip install -r requirements.txt
+# macOS: KHÔNG thêm -c constraints.txt (pin torch +cpu, chỉ dùng cho Docker/CI)
+# Muốn đúng bộ version đã verify: python -m pip install -r requirements.lock
 
 # 2. Tạo .env từ mẫu (điền API key + cấu hình)
 cp .env.example .env

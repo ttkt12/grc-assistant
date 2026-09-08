@@ -111,7 +111,7 @@ brew install gh && gh auth login
 
 ### 1.4 Clone repo
 
-Tên thư mục **phải là `grc-assistant`** — AgentBase lấy tên app từ tên thư mục, và các doc trong repo đều giả định đường dẫn này.
+Tên thư mục **phải là `grc-assistant`** — AgentBase lấy tên app từ tên thư mục. Thư mục cha thì tuỳ ý (`~/grc-assistant`, `~/Documents/grc-assistant`, …); chỉ lưu ý các lệnh copy-paste trong doc này viết theo `~/grc-assistant`, đặt chỗ khác thì tự đổi path.
 
 ```bash
 cd ~ && git clone https://github.com/ttkt12/grc-assistant.git && cd grc-assistant
@@ -129,10 +129,12 @@ brew install python@3.12
 cd ~/grc-assistant && python3.12 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
 ```
 
-Nếu gặp lỗi phiên bản, có `constraints.txt`:
+**Trên macOS KHÔNG dùng `-c constraints.txt`.** File đó pin `torch==2.12.0+cpu` — build `+cpu` chỉ có wheel cho Linux/Windows (Docker và CI lấy qua PyTorch CPU index), nên trên macOS pip sẽ fail `ResolutionImpossible`. `constraints.txt` chỉ dành cho Docker/CI.
+
+`requirements.txt` không pin version, nên máy mới sẽ nhận bản mới nhất trên PyPI (có thể lệch major so với máy cũ). Muốn dựng lại đúng bộ version đã verify:
 
 ```bash
-pip install -r requirements.txt -c constraints.txt
+pip install -r requirements.lock
 ```
 
 ### 1.6 Restore secrets và dữ liệu
