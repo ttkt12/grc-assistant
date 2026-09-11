@@ -121,12 +121,30 @@ def load_documents():
         raise RuntimeError(f"No PDF documents found in {PAPERS_DIR.resolve()}")
 
     documents = []
+    empty_sources: list[Path] = []
     for path in paths:
-        documents.extend(PyPDFLoader(str(path)).load())
+        pages = PyPDFLoader(str(path)).load()
+        # A scan with no text layer loads its pages fine but yields no characters,
+        # so it reaches the index as zero chunks. Without this check the run still
+        # reports every PDF as ingested and the gap is invisible.
+        if not any((page.page_content or "").strip() for page in pages):
+            empty_sources.append(path)
+            continue
+        documents.extend(pages)
+
+    if empty_sources:
+        print(
+            f"WARNING: {len(empty_sources)} of {len(paths)} PDFs contain no extractable "
+            "text and will NOT be searchable. They are most likely scans without a text "
+            "layer; run OCR over them to include their content."
+        )
+        for path in empty_sources:
+            print(f"  no text layer: {path.name}")
 
     if not documents:
         raise RuntimeError(f"No PDF documents found in {PAPERS_DIR.resolve()}")
 
+    print(f"Indexable PDFs: {len(paths) - len(empty_sources)} of {len(paths)}.")
     return documents
 
 

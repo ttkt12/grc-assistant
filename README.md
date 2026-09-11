@@ -76,18 +76,20 @@ flowchart TD
 
 ## 📚 Cơ sở tri thức
 
-Bộ **ISMS Portal** hiện hành — **52 tài liệu duy nhất**:
+Bộ **ISMS Portal** hiện hành — **50 tài liệu tra cứu được**:
 
 | Loại | Số lượng |
 |---|---:|
-| 📏 Tiêu chuẩn (Standard) | 25 |
+| 📏 Tiêu chuẩn (Standard) | 23 |
 | 🔧 Quy trình (Procedure) | 13 |
 | 🗃️ Hồ sơ (Record) | 8 |
 | 📜 Chính sách (Policy) | 4 |
 | 🏅 Chứng nhận (Certificate) | 2 |
-| **Tổng** | **52** |
+| **Tổng** | **50** |
 
 > Index loại bỏ thư mục `Archives/` (các bản 2022–2023 lỗi thời) và các bản sao trùng để retrieval không bị nhiễu.
+
+> **Thư mục nguồn có 52 PDF, nhưng 2 file là bản scan không có text layer** nên không trích xuất được nội dung và không vào index: `48_23-QD-ZION - Quy dinh ve to chuc bao dam an toan thong tin.pdf` và `PCI DSS AOC 1.pdf`. `ingest.py` cảnh báo rõ khi gặp chúng. Muốn đưa vào thì phải OCR trước.
 
 ## 🖥️ Giao diện & API
 

@@ -6,7 +6,7 @@ Trợ lý tri thức ISMS cho Zalopay (Compliance / GRC). Demo gồm **2 kênh**
 
 ## 🎯 Mục tiêu (nói mở đầu ~30s)
 
-> "GRC Assistant biến **52 tài liệu ISMS** đã duyệt của Zalopay thành trợ lý hỏi đáp. Mọi câu trả lời **chỉ lấy từ tài liệu**, kèm **trích dẫn nguồn** — không bịa, phù hợp môi trường tuân thủ. Dùng được trên **web** và ngay trong **Microsoft Teams**."
+> "GRC Assistant biến **50 tài liệu ISMS** đã duyệt của Zalopay thành trợ lý hỏi đáp. Mọi câu trả lời **chỉ lấy từ tài liệu**, kèm **trích dẫn nguồn** — không bịa, phù hợp môi trường tuân thủ. Dùng được trên **web** và ngay trong **Microsoft Teams**."
 
 ---
 
@@ -34,12 +34,12 @@ Script sẽ khởi động server, chờ sẵn sàng, tự mở trình duyệt `
 
 | # | Thao tác | Câu hỏi | Điểm nhấn khi nói |
 |---|---|---|---|
-| 1 | Mở trang | — | **Trang intro**: tổng quan 52 tài liệu (25 tiêu chuẩn · 13 quy trình · 8 hồ sơ · 4 chính sách · 2 chứng nhận). Bấm **"Vào trợ lý hỏi đáp"**. |
+| 1 | Mở trang | — | **Trang intro**: tổng quan 50 tài liệu (23 tiêu chuẩn · 13 quy trình · 8 hồ sơ · 4 chính sách · 2 chứng nhận). Bấm **"Vào trợ lý hỏi đáp"**. |
 | 2 | Gõ | `tham khảo tài liệu gì về cấp quyền truy cập` | **Định tuyến thông minh** → gợi ý đúng tài liệu (QT-04, TC-13, QT-15) **tức thì**, không cần gọi LLM. |
 | 3 | Gõ | `quy trình xử lý sự cố bảo mật gồm những bước nào` | Trả lời grounded + **trích dẫn `[n]` kiểu NotebookLM**. **Hover** vào `[n]` để xem nguồn, **click** để cuộn tới & highlight thẻ nguồn. |
 | 4 | Gõ | `QT-01 có bao nhiêu version` | **Lịch sử phiên bản** — liệt kê đúng từ bảng trong tài liệu, dẫn đúng nguồn. |
 | 5 | Gõ | `ai là tác giả của ZION-TC-13` | **Metadata theo bằng chứng** — không lấy từ field auto-extract dễ sai. |
-| 6 | Gõ | `có bao nhiêu tài liệu` | **Catalog** — trả lời chính xác 52. |
+| 6 | Gõ | `có bao nhiêu tài liệu` | **Catalog** — trả lời chính xác 50. |
 | 7 | Gõ | `bạn làm được gì` | **Câu xã giao/meta** — trả lời thân thiện về năng lực (không lôi nội dung lạ). |
 | 8 | Bấm 🌙/☀️ (góc trên phải) | — | **Dark/Light mode**, branding Zalopay. |
 

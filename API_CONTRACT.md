@@ -103,14 +103,14 @@ Catalog response:
 
 ```json
 {
-  "answer": "Hien tai AI Agent nay co 52 tai lieu duy nhat trong document catalog.",
+  "answer": "Hien tai AI Agent nay co 50 tai lieu duy nhat trong document catalog.",
   "sources": [],
   "session_id": null,
   "answer_type": "catalog",
   "metadata": {
     "answer_type": "catalog",
     "question_type": "count",
-    "total_documents": 52,
+    "total_documents": 50,
     "documents": [
       {
         "code": "ZION-QT-08",
@@ -187,7 +187,7 @@ Response:
 
 ```json
 {
-  "total_documents": 52
+  "total_documents": 50
 }
 ```
 
@@ -199,7 +199,7 @@ Response:
 
 ```json
 {
-  "total_documents": 52,
+  "total_documents": 50,
   "documents": [
     {
       "code": "ZION-QT-08",
