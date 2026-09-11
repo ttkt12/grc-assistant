@@ -2,7 +2,7 @@
 
 ## Secret Handling
 
-- Do not commit `.env`, local token caches, Microsoft client secrets, GreenNode credentials, Teams bot passwords, or API keys.
+- Do not commit `.env`, local token caches, Microsoft client secrets, Teams bot passwords, or API keys.
 - Store runtime values in local `.env` for development and GitHub Secrets for CI/CD.
 - Use `.env.example` for placeholder names only.
 - If a secret is accidentally committed, rotate it immediately and remove it from the repository history where required.

@@ -32,7 +32,7 @@ python build_document_catalog.py
 document_catalog.json
   |
   v
-manual AgentBase runtime update when needed
+manual Agent Base redeploy when needed
 ```
 
 GitHub Actions is now used for repository checks only:
@@ -40,7 +40,7 @@ GitHub Actions is now used for repository checks only:
 - security audit
 - Python compile checks
 - catalog-only smoke tests
-- optional verification of the existing AgentBase runtime
+- optional verification of the live deployment
 
 GitHub Actions does not:
 
@@ -49,7 +49,7 @@ GitHub Actions does not:
 - run `scripts/graph_auth_diagnostic.py`
 - require `MS_CLIENT_SECRET` for SharePoint
 - rebuild `vector_db/` from SharePoint
-- create a duplicate AgentBase runtime
+- create a duplicate Agent Base application
 
 ## Local SharePoint Sync
 
@@ -120,7 +120,6 @@ CI no longer needs SharePoint client credentials. Do not add these as required C
 
 CI may still use non-SharePoint secrets for optional production verification or future deployment tasks, such as:
 
-- `AGENTBASE_ENDPOINT_URL`
 - `AI_PLATFORM_API_KEY`
 - `AI_PLATFORM_BASE_URL`
 - `AI_PLATFORM_MODEL`
@@ -133,10 +132,10 @@ CI may still use non-SharePoint secrets for optional production verification or 
 Because CI no longer syncs SharePoint and no longer has `vector_db/`, the safe default is:
 
 - CI checks code only.
-- CI does not build or deploy a new AgentBase image that would omit the knowledge base.
-- The existing AgentBase runtime remains unchanged until you perform a manual knowledge/runtime update.
+- CI does not build or deploy an image that would omit the knowledge base.
+- The live deployment remains unchanged until you perform a manual knowledge update and redeploy.
 
-To update production knowledge, run the local knowledge update flow first, then deploy the existing AgentBase runtime with an artifact/image that includes the refreshed `vector_db/` and `document_catalog.json`.
+To update production knowledge, run the local knowledge update flow first, then redeploy to Agent Base with an image that includes the refreshed `vector_db/` and `document_catalog.json`.
 
 ## Tradeoff
 

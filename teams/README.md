@@ -9,18 +9,18 @@ Update `manifest.json`:
 * `id`: use the Microsoft Bot App ID.
 * `bots[0].botId`: use the same Microsoft Bot App ID.
 * `developer.websiteUrl`, `developer.privacyUrl`, and `developer.termsOfUseUrl`: use approved URLs for your tenant.
-* `validDomains[0]`: use only the AgentBase runtime hostname, without `https://`.
+* `validDomains[0]`: use only the Agent Base domain, without `https://`.
 
 Example domain:
 
 ```text
-endpoint-77ada21e-9fec-4ea0-96ff-f9f6e79fbe1a.agentbase-runtime.aiplatform.vngcloud.vn
+<your-app>.ai.zalopay.xyz
 ```
 
 The messaging endpoint configured in Azure Bot / Bot Channels Registration must be:
 
 ```text
-https://<my-agentbase-runtime-domain>/api/messages
+https://<your-app>.ai.zalopay.xyz/api/messages
 ```
 
 ## Required Files In The Zip
@@ -45,7 +45,7 @@ To build a package from this template with real values injected at build time
 ```powershell
 python scripts/package_teams_app.py --source teams `
   --bot-id "<MICROSOFT_APP_ID>" `
-  --domain "endpoint-77ada21e-9fec-4ea0-96ff-f9f6e79fbe1a.agentbase-runtime.aiplatform.vngcloud.vn"
+  --domain "<your-app>.ai.zalopay.xyz"
 ```
 
 Building from this template without `--bot-id`/`--domain` fails with a clear

@@ -133,7 +133,7 @@ def main() -> int:
     parser.add_argument(
         "--domain",
         default="",
-        help="AgentBase runtime domain without path. https:// is accepted and removed for validDomains.",
+        help="Agent Base domain without path. https:// is accepted and removed for validDomains.",
     )
     args = parser.parse_args()
 

@@ -61,7 +61,7 @@ python chatbot.py
 
 GitHub Actions does not sync SharePoint or rebuild `vector_db/`.
 
-After local verification, deploy/update the existing AgentBase runtime using a package or image that includes:
+After local verification, redeploy to Agent Base with an image that includes:
 
 - `vector_db/index.faiss`
 - `vector_db/index.pkl`

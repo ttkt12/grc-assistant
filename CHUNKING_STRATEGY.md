@@ -84,4 +84,4 @@ Then run:
 python chatbot.py
 ```
 
-AgentBase deployments must include the rebuilt `vector_db/` and `document_catalog.json`.
+Agent Base deployments must include the rebuilt `vector_db/` and `document_catalog.json`.

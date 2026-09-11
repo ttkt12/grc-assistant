@@ -1,9 +1,6 @@
 .env
 .env.*
 *.env
-.greennode.json
-.agentbase/
-.agentbase-state.json
 *.credentials.json
 
 .git

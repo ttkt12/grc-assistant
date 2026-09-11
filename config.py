@@ -76,18 +76,6 @@ MAX_TOKENS = int(os.getenv("MAX_TOKENS", "4096"))
 MAX_CONTEXT_CHARS = int(os.getenv("MAX_CONTEXT_CHARS", "5000"))
 SHOW_USAGE = os.getenv("SHOW_USAGE", "true").lower() in {"1", "true", "yes", "y"}
 ANSWER_LANGUAGE = os.getenv("ANSWER_LANGUAGE", "vi").lower()
-ENABLE_AGENTBASE_MEMORY = os.getenv("ENABLE_AGENTBASE_MEMORY", "false").lower() in {
-    "1",
-    "true",
-    "yes",
-    "y",
-    "on",
-}
-MEMORY_ID = (os.getenv("MEMORY_ID") or os.getenv("AGENTBASE_MEMORY_ID") or "").strip()
-MEMORY_STRATEGY_ID = os.getenv("MEMORY_STRATEGY_ID", "").strip()
-MEMORY_ACTOR_ID = os.getenv("MEMORY_ACTOR_ID", "").strip()
-MEMORY_SEARCH_LIMIT = int(os.getenv("MEMORY_SEARCH_LIMIT", "5"))
-MEMORY_MAX_CONTEXT_CHARS = int(os.getenv("MEMORY_MAX_CONTEXT_CHARS", "1200"))
 
 API_KEY_ENV_NAMES = (
     "AI_PLATFORM_API_KEY",

@@ -13,7 +13,7 @@ Use the backend `POST /chat` endpoint for a custom web UI.
 Example deployed backend (replace with your runtime hostname):
 
 ```text
-https://<your-agentbase-runtime-domain>
+https://<your-app>.ai.zalopay.xyz
 ```
 
 ## Call `/chat`
@@ -59,7 +59,7 @@ Response:
 ## JavaScript Example
 
 ```js
-const API_BASE_URL = "https://endpoint-77ada21e-9fec-4ea0-96ff-f9f6e79fbe1a.agentbase-runtime.aiplatform.vngcloud.vn";
+const API_BASE_URL = "https://<your-app>.ai.zalopay.xyz";
 
 export async function askGrcAssistant(question) {
   const response = await fetch(`${API_BASE_URL}/chat`, {

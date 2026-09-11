@@ -13,7 +13,7 @@ Trợ lý tri thức ISMS cho Zalopay (Compliance / GRC). Demo gồm **2 kênh**
 ## ⚙️ Chuẩn bị (chọn 1)
 
 **Cách A — Endpoint đã deploy (khuyến nghị, không cần setup):**
-- Web: `https://endpoint-77ada21e-9fec-4ea0-96ff-f9f6e79fbe1a.agentbase-runtime.aiplatform.vngcloud.vn/`
+- Web: `https://<your-app>.ai.zalopay.xyz/`
 - Teams: bot **GRC Assistant** (đã cài, chat trực tiếp).
 
 **Cách B — Chạy local (backup, không phụ thuộc mạng/AgentBase):**

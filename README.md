@@ -12,7 +12,7 @@ Câu trả lời **chỉ lấy từ tài liệu đã được lập chỉ mục*
 ![LangChain](https://img.shields.io/badge/LangChain-RAG-1C3C3C)
 ![FAISS](https://img.shields.io/badge/FAISS-vector%20search-0467DF)
 ![Teams](https://img.shields.io/badge/Microsoft%20Teams-Bot%20Framework-6264A7?logo=microsoftteams&logoColor=white)
-![AgentBase](https://img.shields.io/badge/GreenNode-AgentBase-00CF6A)
+![Agent Base](https://img.shields.io/badge/Zalopay-Agent%20Base-0068FF)
 ![Grounded](https://img.shields.io/badge/Answers-Grounded%20%2F%20No%20hallucination-0033C9)
 
 </div>
@@ -104,9 +104,9 @@ Bộ **ISMS Portal** hiện hành — **52 tài liệu duy nhất**:
 
 - **Ngôn ngữ/Server:** Python 3.10 · `aiohttp`
 - **RAG:** LangChain · **FAISS** (`faiss-cpu`) · `sentence-transformers` (`paraphrase-multilingual-MiniLM-L12-v2`)
-- **LLM:** OpenAI-compatible (GreenNode AI Platform / VNG MaaS — Qwen)
+- **LLM:** OpenAI-compatible (VNG Cloud MaaS — Qwen)
 - **Teams:** `botbuilder-core` / `botbuilder-schema`
-- **Hạ tầng:** Docker → **GreenNode AgentBase** runtime · `msal` (SharePoint Graph) · `pypdf`
+- **Hạ tầng:** Docker → **Zalopay Agent Base** · `msal` (SharePoint Graph) · `pypdf`
 
 ## 🚀 Chạy tại máy
 
@@ -146,14 +146,14 @@ python build_document_catalog.py # đồng bộ catalog
 python predeploy_check.py        # kiểm tra sẵn sàng trước khi deploy
 ```
 
-## ☁️ Triển khai (GreenNode AgentBase)
+## ☁️ Triển khai (Zalopay Agent Base)
 
 Container chạy `python teams_bot.py`, lắng nghe cổng **8080**, bundle sẵn `vector_db/` + `document_catalog.json`.
 
 ```bash
 python predeploy_check.py                                   # phải PASS
 docker build --platform linux/amd64 -t grc-assistant .      # image deploy
-# Đẩy lên runtime qua AgentBase (skill /agentbase-deploy)
+# Đẩy lên Agent Base (skill zlp-agentbase-deploy)
 ```
 
 Chi tiết: [DEPLOYMENT.md](DEPLOYMENT.md) · Teams: [README_TEAMS.md](README_TEAMS.md)
@@ -178,7 +178,7 @@ teams_app/                # Gói Microsoft Teams (manifest + icons)
 
 ## 🔐 Bảo mật
 
-- **Không** commit secret (`.env`, `.greennode.json`, token, credentials) — đã chặn qua `.gitignore`/`.dockerignore`.
+- **Không** commit secret (`.env`, token, credentials) — đã chặn qua `.gitignore`/`.dockerignore`.
 - SharePoint sync **giới hạn** đúng folder ISMS Portal.
 - Câu trả lời **grounded** — không bổ sung kiến thức ngoài tài liệu.
 

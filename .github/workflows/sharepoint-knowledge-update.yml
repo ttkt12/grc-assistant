@@ -2,18 +2,15 @@ name: GRC Assistant CI / Deploy
 
 "on":
   workflow_dispatch:
-    inputs:
-      run_production_verify:
-        description: "Verify the existing AgentBase runtime after CI checks"
-        required: false
-        default: "false"
-        type: choice
-        options:
-          - "false"
-          - "true"
   push:
     paths:
       - "chatbot.py"
+      - "conversational.py"
+      - "document_intelligence.py"
+      - "document_recommendation.py"
+      - "eval_agent.py"
+      - "document_catalog.json"
+      - "test_questions.json"
       - "rag_core.py"
       - "answer_engine.py"
       - "intent_router.py"
@@ -62,7 +59,6 @@ jobs:
       SHOW_USAGE: "false"
       DEBUG_RETRIEVAL: "false"
       ANSWER_LANGUAGE: vi
-      AGENTBASE_ENDPOINT_URL: ${{ secrets.AGENTBASE_ENDPOINT_URL }}
 
     steps:
       - name: Checkout code
@@ -105,11 +101,13 @@ jobs:
             document_evidence_metadata.py \
             context_budget.py \
             text_utils.py \
-            memory.py \
             intent_router.py \
             answer_engine.py \
             rag_core.py \
             chatbot.py \
+            conversational.py \
+            document_recommendation.py \
+            eval_agent.py \
             sharepoint_sync.py \
             teams_bot.py \
             predeploy_check.py \
@@ -117,16 +115,9 @@ jobs:
             scripts/golden_regression_test.py \
             scripts/local_refresh_knowledge.py \
             scripts/production_verify.py \
-            scripts/security_audit.py
+            scripts/security_audit.py \
+            scripts/graph_auth_diagnostic.py \
+            scripts/package_teams_app.py
 
       - name: Run catalog-only smoke tests
         run: python scripts/ci_smoke_test.py --catalog-only
-
-      - name: Verify existing production runtime
-        if: ${{ inputs.run_production_verify == 'true' }}
-        run: |
-          if [ -z "${AGENTBASE_ENDPOINT_URL:-}" ]; then
-            echo "AGENTBASE_ENDPOINT_URL secret is required for production verification."
-            exit 1
-          fi
-          python scripts/production_verify.py --base-url "$AGENTBASE_ENDPOINT_URL"

@@ -42,13 +42,13 @@ Do not commit real Microsoft credentials.
 5. Set the bot messaging endpoint to:
 
 ```text
-https://<my-agentbase-runtime-domain>/api/messages
+https://<your-app>.ai.zalopay.xyz/api/messages
 ```
 
-For the current AgentBase runtime:
+For the current Agent Base deployment:
 
 ```text
-https://endpoint-77ada21e-9fec-4ea0-96ff-f9f6e79fbe1a.agentbase-runtime.aiplatform.vngcloud.vn/api/messages
+https://<your-app>.ai.zalopay.xyz/api/messages
 ```
 
 ## Teams App Package
@@ -86,7 +86,7 @@ In `manifest.json`, set:
 
 * `id` to the Microsoft Bot App ID.
 * `bots[0].botId` to the same Microsoft Bot App ID.
-* `validDomains` to the AgentBase runtime hostname without `https://`.
+* `validDomains` to the Agent Base domain without `https://`.
 
 Upload the zip through Microsoft Teams custom app upload. If custom app upload is blocked, send the zip to IT/admin and ask them to upload it to the Teams app catalog.
 
@@ -124,7 +124,7 @@ To build from the `teams/` template with real values injected at build time
 ```powershell
 python scripts/package_teams_app.py --source teams `
   --bot-id "<MICROSOFT_APP_ID>" `
-  --domain "endpoint-77ada21e-9fec-4ea0-96ff-f9f6e79fbe1a.agentbase-runtime.aiplatform.vngcloud.vn"
+  --domain "<your-app>.ai.zalopay.xyz"
 ```
 
 ## Local Validation

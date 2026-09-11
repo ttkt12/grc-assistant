@@ -5,7 +5,7 @@ GRC Assistant is served by `teams_bot.py` using `aiohttp`. The backend exposes t
 Base URL:
 
 ```text
-https://endpoint-77ada21e-9fec-4ea0-96ff-f9f6e79fbe1a.agentbase-runtime.aiplatform.vngcloud.vn
+https://<your-app>.ai.zalopay.xyz
 ```
 
 ## Endpoint Summary
@@ -30,7 +30,7 @@ Response:
 Example:
 
 ```bash
-curl "https://endpoint-77ada21e-9fec-4ea0-96ff-f9f6e79fbe1a.agentbase-runtime.aiplatform.vngcloud.vn/health"
+curl "https://<your-app>.ai.zalopay.xyz/health"
 ```
 
 ## `GET /`
@@ -219,7 +219,7 @@ Purpose: receives Microsoft Teams / Bot Framework activity payloads.
 Teams and Bot Framework should POST message activities to:
 
 ```text
-https://endpoint-77ada21e-9fec-4ea0-96ff-f9f6e79fbe1a.agentbase-runtime.aiplatform.vngcloud.vn/api/messages
+https://<your-app>.ai.zalopay.xyz/api/messages
 ```
 
 Do not call this endpoint from the browser UI. A direct `GET /api/messages` returns `405 Method Not Allowed`, which is expected.
