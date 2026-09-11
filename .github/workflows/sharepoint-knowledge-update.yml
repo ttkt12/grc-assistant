@@ -20,7 +20,6 @@ name: GRC Assistant CI / Deploy
       - "document_evidence_metadata.py"
       - "context_budget.py"
       - "text_utils.py"
-      - "memory.py"
       - "predeploy_check.py"
       - "ingest.py"
       - "build_document_catalog.py"

@@ -89,14 +89,13 @@ def scan_text_file(path: Path) -> list[str]:
         if pattern.search(text):
             hits.append(label)
 
-    if not str(path).replace("\\", "/").startswith(".agents/skills/"):
-        for line in text.splitlines():
-            stripped = line.strip()
-            if not stripped or stripped.startswith("#"):
-                continue
-            if looks_like_real_assignment_secret(stripped):
-                hits.append("secret_assignment")
-                break
+    for line in text.splitlines():
+        stripped = line.strip()
+        if not stripped or stripped.startswith("#"):
+            continue
+        if looks_like_real_assignment_secret(stripped):
+            hits.append("secret_assignment")
+            break
 
     return sorted(set(hits))
 
